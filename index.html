@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TURTLES Gift Box, Smooth Caramel &amp; Crunchy Pecans - Amazon.ca</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Amazon Ember", Arial, sans-serif; font-size: 13px; color: #0F1111; background: #fff; }
+  a { color: #007185; text-decoration: none; }
+  a:hover { color: #C7511F; text-decoration: underline; }
+
+  /* TOP NAV */
+  #nav-bar { background: #131921; color: #fff; }
+  #nav-main { display: flex; align-items: center; padding: 8px 10px; gap: 6px; }
+  #nav-logo { color: #fff; font-size: 22px; font-weight: 900; letter-spacing: -1px; padding: 4px 8px; border: 1px solid transparent; }
+  #nav-logo span { color: #FF9900; }
+  #nav-logo:hover { border-color: #fff; text-decoration: none; color: #fff; }
+  #nav-deliver { color: #ccc; font-size: 11px; padding: 4px 8px; border: 1px solid transparent; cursor: pointer; white-space: nowrap; }
+  #nav-deliver:hover { border-color: #fff; }
+  #nav-deliver strong { display: block; color: #fff; font-size: 13px; }
+  #nav-search { flex: 1; display: flex; height: 40px; }
+  #nav-search select { background: #f3f3f3; border: none; border-radius: 4px 0 0 4px; padding: 0 8px; font-size: 12px; color: #555; cursor: pointer; }
+  #nav-search input { flex: 1; border: none; padding: 0 10px; font-size: 15px; outline: none; }
+  #nav-search button { background: #FF9900; border: none; padding: 0 16px; border-radius: 0 4px 4px 0; cursor: pointer; font-size: 18px; }
+  #nav-search button:hover { background: #e47911; }
+  #nav-right { display: flex; align-items: center; gap: 4px; }
+  .nav-btn { color: #fff; padding: 4px 8px; border: 1px solid transparent; cursor: pointer; white-space: nowrap; line-height: 1.3; }
+  .nav-btn:hover { border-color: #fff; text-decoration: none; color: #fff; }
+  .nav-btn small { display: block; font-size: 11px; color: #ccc; }
+  .nav-btn strong { display: block; font-size: 13px; }
+  #nav-cart { font-size: 13px; font-weight: 700; }
+  #nav-cart-count { color: #FF9900; font-size: 18px; font-weight: 900; }
+  #nav-sub { background: #232f3e; padding: 6px 10px; display: flex; gap: 4px; align-items: center; overflow: hidden; }
+  .nav-sub-link { color: #fff; padding: 5px 8px; font-size: 13px; border: 1px solid transparent; white-space: nowrap; }
+  .nav-sub-link:hover { border-color: #fff; text-decoration: none; color: #fff; }
+
+  /* BREADCRUMB */
+  #breadcrumb { padding: 8px 16px; font-size: 12px; color: #565959; }
+  #breadcrumb a { color: #007185; }
+
+  /* MAIN LAYOUT */
+  #dp { display: flex; max-width: 1500px; margin: 0 auto; padding: 16px; gap: 20px; }
+
+  /* LEFT: IMAGE BLOCK */
+  #imageBlock { width: 500px; flex-shrink: 0; display: flex; }
+  #altImages { display: flex; flex-direction: column; gap: 6px; width: 46px; flex-shrink: 0; margin-right: 10px; }
+  .thumb-btn {
+    width: 46px; height: 46px; border: 1px solid #ddd; border-radius: 3px;
+    overflow: hidden; cursor: pointer; background: #fff; padding: 2px;
+    transition: border-color 0.1s;
+  }
+  .thumb-btn:hover, .thumb-btn.selected { border-color: #FF9900; border-width: 2px; }
+  .thumb-btn img { width: 100%; height: 100%; object-fit: contain; }
+  #mainImageWrapper {
+    flex: 1; border: 1px solid #ddd; border-radius: 4px;
+    overflow: hidden; position: relative; background: #fff;
+    cursor: zoom-in; height: 440px; display: flex; align-items: center; justify-content: center;
+  }
+  #landingImage { max-width: 100%; max-height: 440px; object-fit: contain; transition: opacity 0.15s; }
+
+  /* CENTER: PRODUCT INFO */
+  #centerCol { flex: 1; min-width: 0; }
+  #productTitle { font-size: 20px; font-weight: 400; line-height: 1.3; margin-bottom: 8px; }
+  #byline { font-size: 13px; color: #565959; margin-bottom: 6px; }
+  #byline a { color: #007185; }
+  #starRating { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #e7e7e7; flex-wrap: wrap; }
+  .stars { color: #FF9900; font-size: 16px; letter-spacing: -1px; }
+  .rating-count { color: #007185; font-size: 13px; }
+  #limitedDeal { background: #CC0C39; color: #fff; font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 2px; display: inline-block; margin-bottom: 6px; }
+  #priceBlock { margin-bottom: 12px; }
+  #priceBlock .save-pct { color: #CC0C39; font-size: 20px; font-weight: 300; }
+  #priceBlock .price { font-size: 28px; font-weight: 400; }
+  #priceBlock .price-sym { font-size: 14px; vertical-align: top; margin-top: 6px; display: inline-block; }
+  #priceBlock .list-price { color: #565959; font-size: 13px; margin-top: 2px; }
+  #priceBlock .list-price s { color: #565959; }
+  #primeBlock { display: flex; align-items: center; gap: 6px; margin: 8px 0; }
+  .prime-logo { background: #00A8E0; color: #fff; font-size: 11px; font-weight: 900; padding: 2px 6px; border-radius: 3px; letter-spacing: 1px; }
+  .prime-text { font-size: 13px; }
+  #deliveryBlock { font-size: 13px; margin: 10px 0; line-height: 1.8; }
+  #stockStatus { color: #007600; font-size: 17px; margin: 10px 0; }
+  #quantityRow { display: flex; align-items: center; gap: 10px; margin: 10px 0; }
+  #quantityRow label { font-size: 13px; }
+  #quantityRow select { border: 1px solid #888; border-radius: 8px; padding: 6px 10px; font-size: 13px; background: #f0f2f2; cursor: pointer; }
+  .btn-atc { display: block; width: 100%; background: #FFD814; border: 1px solid #FCD200; border-radius: 20px; padding: 9px; font-size: 14px; text-align: center; cursor: pointer; font-weight: 400; margin: 6px 0; transition: background 0.1s; }
+  .btn-atc:hover { background: #F7CA00; }
+  .btn-bin { display: block; width: 100%; background: #FFA41C; border: 1px solid #FF8F00; border-radius: 20px; padding: 9px; font-size: 14px; text-align: center; cursor: pointer; font-weight: 400; margin: 6px 0; transition: background 0.1s; }
+  .btn-bin:hover { background: #FA8900; }
+  #secureTransaction { font-size: 12px; color: #565959; text-align: center; margin: 4px 0; }
+  #soldBy { font-size: 13px; margin: 10px 0; line-height: 1.8; }
+  #soldBy a { color: #007185; }
+
+  /* RIGHT: BUY BOX */
+  #rightCol { width: 240px; flex-shrink: 0; }
+  #buyBox { border: 1px solid #D5D9D9; border-radius: 8px; padding: 16px; }
+  #buyBox .buy-price { font-size: 24px; margin-bottom: 8px; }
+  #buyBox .buy-price .price-sym { font-size: 13px; vertical-align: top; margin-top: 4px; display: inline-block; }
+  #buyBox .delivery-info { font-size: 13px; margin-bottom: 8px; line-height: 1.5; }
+  #buyBox .in-stock { color: #007600; font-size: 17px; margin-bottom: 10px; }
+  #buyBox select { border: 1px solid #888; border-radius: 8px; padding: 6px 10px; font-size: 13px; background: #f0f2f2; width: 100%; margin-bottom: 10px; cursor: pointer; }
+  .buy-box-row { display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; }
+  .buy-box-row a { color: #007185; }
+  #returnPolicy { font-size: 12px; color: #565959; margin-top: 8px; padding-top: 8px; border-top: 1px solid #e7e7e7; }
+
+  /* PRODUCT DETAILS */
+  #detailsSection { max-width: 940px; margin: 20px auto; padding: 0 16px; }
+  #detailsSection h2 { font-size: 20px; font-weight: 700; margin: 20px 0 10px; padding-top: 16px; border-top: 1px solid #e7e7e7; }
+  #detailsSection ul { padding-left: 20px; }
+  #detailsSection ul li { margin-bottom: 6px; font-size: 14px; line-height: 1.5; }
+  #productDetails table { border-collapse: collapse; width: 100%; }
+  #productDetails table tr:nth-child(odd) { background: #f7f7f7; }
+  #productDetails table td { padding: 8px 12px; font-size: 13px; border-bottom: 1px solid #e7e7e7; }
+  #productDetails table td:first-child { color: #565959; width: 200px; font-weight: 700; }
+
+  /* SPONSORED */
+  #sponsoredSection { border-top: 1px solid #e7e7e7; padding: 16px; max-width: 1500px; margin: 0 auto; }
+  #sponsoredSection h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+  #sponsoredGrid { display: flex; gap: 10px; overflow: hidden; }
+  .sp-card { border: 1px solid #ddd; border-radius: 4px; padding: 10px; width: 160px; flex-shrink: 0; font-size: 12px; cursor: pointer; transition: box-shadow 0.15s; }
+  .sp-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+  .sp-card img { width: 100%; height: 160px; object-fit: contain; margin-bottom: 6px; }
+  .sp-card .sp-title { color: #0F1111; line-height: 1.3; margin-bottom: 4px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .sp-card .sp-stars { color: #FF9900; font-size: 11px; }
+  .sp-card .sp-price { font-weight: 700; margin-top: 4px; }
+  .sp-card .sp-prime { color: #00A8E0; font-weight: 900; font-size: 10px; }
+
+  /* FOOTER */
+  footer { background: #232f3e; color: #fff; margin-top: 30px; }
+  #footer-back { background: #37475A; text-align: center; padding: 14px; font-size: 13px; cursor: pointer; }
+  #footer-back:hover { background: #485769; }
+  #footer-links { display: flex; justify-content: center; gap: 60px; padding: 30px; flex-wrap: wrap; }
+  .footer-col h4 { font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+  .footer-col a { display: block; color: #ccc; font-size: 13px; margin-bottom: 6px; }
+  .footer-col a:hover { color: #fff; text-decoration: underline; }
+  #footer-bottom { background: #131921; text-align: center; padding: 14px; color: #ccc; font-size: 12px; }
+
+  /* NICK OVERLAY */
+  #nick-overlay {
+    position: fixed; pointer-events: none; z-index: 999999;
+    width: 300px; height: 300px;
+    border: 3px solid #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    border-radius: 8px; display: none;
+    object-fit: contain; background: #000;
+  }
+</style>
+</head>
+<body>
+
+<div id="nav-bar">
+  <div id="nav-main">
+    <a id="nav-logo" href="#">amazon<span>.ca</span></a>
+    <div id="nav-deliver" class="nav-btn">
+      <small>Deliver to</small>
+      <strong>📍 Canada</strong>
+    </div>
+    <div id="nav-search">
+      <select><option>All</option><option>Grocery</option><option>Electronics</option></select>
+      <input type="text" value="turtle chocolates">
+      <button>🔍</button>
+    </div>
+    <div id="nav-right">
+      <a class="nav-btn" href="#"><small>Hello, sign in</small><strong>Account &amp; Lists</strong></a>
+      <a class="nav-btn" href="#"><small>Returns</small><strong>&amp; Orders</strong></a>
+      <a class="nav-btn" id="nav-cart" href="#"><span id="nav-cart-count">0</span> Cart</a>
+    </div>
+  </div>
+  <div id="nav-sub">
+    <a class="nav-sub-link" href="#">☰ All</a>
+    <a class="nav-sub-link" href="#">Today's Deals</a>
+    <a class="nav-sub-link" href="#">Customer Service</a>
+    <a class="nav-sub-link" href="#">Gift Cards</a>
+    <a class="nav-sub-link" href="#">Sell</a>
+    <a class="nav-sub-link" href="#">Prime</a>
+    <a class="nav-sub-link" href="#">New Releases</a>
+    <a class="nav-sub-link" href="#">Best Sellers</a>
+    <a class="nav-sub-link" href="#">Pharmacy</a>
+    <a class="nav-sub-link" href="#">Browsing History</a>
+  </div>
+</div>
+
+<div id="breadcrumb">
+  <a href="#">Grocery &amp; Gourmet Food</a> › <a href="#">Candy &amp; Chocolate</a> › <a href="#">Chocolate</a> › <a href="#">Milk Chocolate</a>
+</div>
+
+<div id="dp">
+  <div id="imageBlock">
+    <div id="altImages">
+      <div class="thumb-btn selected" onclick="selectThumb(this)"><img class="product-img" alt="1"></div>
+      <div class="thumb-btn" onclick="selectThumb(this)"><img class="product-img" alt="2"></div>
+      <div class="thumb-btn" onclick="selectThumb(this)"><img class="product-img" alt="3"></div>
+      <div class="thumb-btn" onclick="selectThumb(this)"><img class="product-img" alt="4"></div>
+      <div class="thumb-btn" onclick="selectThumb(this)"><img class="product-img" alt="5"></div>
+      <div class="thumb-btn" onclick="selectThumb(this)"><img class="product-img" alt="6"></div>
+    </div>
+    <div id="mainImageWrapper">
+      <img id="landingImage" class="product-img" alt="Product Image">
+    </div>
+  </div>
+
+  <div id="centerCol">
+    <div id="limitedDeal">Limited time deal</div>
+    <h1 id="productTitle">TURTLES Gift Box, Smooth Caramel &amp; Crunchy Pecans Draped In Rich Chocolate, Prepared In Canada, Gluten-Free, 600 g</h1>
+    <div id="byline">Brand: <a href="#">TURTLES</a></div>
+    <div id="starRating">
+      <span class="stars">★★★★★</span>
+      <a class="rating-count" href="#">4.6 out of 5 stars</a>
+      <a class="rating-count" href="#">3,241 ratings</a>
+      <span style="color:#565959">|</span>
+      <a href="#" style="color:#007185">147 answered questions</a>
+    </div>
+    <div id="priceBlock">
+      <span class="save-pct">-23%&nbsp;</span>
+      <span class="price"><span class="price-sym">$</span>19<span style="font-size:14px">.99</span></span>
+      <div class="list-price">List Price: <s>$25.99</s></div>
+      <div style="font-size:12px;color:#565959;margin-top:2px">($3.33 / 100 g)</div>
+    </div>
+    <div id="primeBlock">
+      <span class="prime-logo">prime</span>
+      <span class="prime-text">FREE delivery <strong>Thursday, March 20</strong></span>
+    </div>
+    <div id="deliveryBlock">
+      Or fastest delivery <strong>Tomorrow, March 20</strong>. Order within <strong style="color:#CC0C39">5 hrs 32 mins</strong><br>
+      <a href="#">📍 Deliver to Montréal</a>
+    </div>
+    <div id="stockStatus">In Stock</div>
+    <div id="quantityRow">
+      <label>Quantity:</label>
+      <select><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+    </div>
+    <button class="btn-atc">Add to Cart</button>
+    <button class="btn-bin">Buy Now</button>
+    <div id="secureTransaction">🔒 Secure transaction</div>
+    <div id="soldBy">
+      Ships from <a href="#">Amazon.ca</a><br>
+      Sold by <a href="#">Amazon.ca</a><br>
+      <a href="#">Return policy: Non-returnable (food safety)</a>
+    </div>
+  </div>
+
+  <div id="rightCol">
+    <div id="buyBox">
+      <div class="buy-price"><span class="price-sym">$</span>19.99</div>
+      <div class="delivery-info">
+        <span class="prime-logo" style="font-size:9px">prime</span>
+        FREE delivery <strong>Thursday, March 20</strong><br>
+        <a href="#">Deliver to Montréal</a>
+      </div>
+      <div class="in-stock">In Stock</div>
+      <select><option>Qty: 1</option><option>Qty: 2</option><option>Qty: 3</option></select>
+      <button class="btn-atc">Add to Cart</button>
+      <button class="btn-bin">Buy Now</button>
+      <div style="font-size:12px;color:#565959;text-align:center;margin:6px 0">🔒 Secure transaction</div>
+      <div class="buy-box-row"><span>Ships from</span><a href="#">Amazon.ca</a></div>
+      <div class="buy-box-row"><span>Sold by</span><a href="#">Amazon.ca</a></div>
+      <div class="buy-box-row"><span>Returns</span><a href="#">Non-returnable</a></div>
+      <div id="returnPolicy"><a href="#">Add a gift receipt for easy returns</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="detailsSection">
+  <h2>About this item</h2>
+  <ul>
+    <li>DECADENT GIFT BOX: TURTLES Gift Box features a delicious combination of smooth caramel, crunchy whole pecans, and rich chocolate — a timeless treat perfect for gift-giving any time of year.</li>
+    <li>PREPARED IN CANADA: Each TURTLES chocolate is proudly made in Canada using quality ingredients.</li>
+    <li>GLUTEN-FREE INDULGENCE: Enjoy the rich, satisfying taste of TURTLES knowing they're gluten-free.</li>
+    <li>GENEROUS SIZE: This gift box contains 600 g of TURTLES chocolates — plenty to share (or not!).</li>
+    <li>GREAT FOR ANY OCCASION: Whether for birthdays, holidays, or corporate gifts, TURTLES are always a welcome treat.</li>
+  </ul>
+  <h2>Product details</h2>
+  <div id="productDetails">
+    <table>
+      <tr><td>Package Dimensions</td><td>22 x 16 x 5 cm; 600 g</td></tr>
+      <tr><td>Date First Available</td><td>August 15, 2024</td></tr>
+      <tr><td>Manufacturer</td><td>DeMet's Candy Company</td></tr>
+      <tr><td>ASIN</td><td>B0D7D74DQY</td></tr>
+      <tr><td>Country of Origin</td><td>Canada</td></tr>
+      <tr><td>Best Sellers Rank</td><td>#3 in Grocery &amp; Gourmet Food</td></tr>
+      <tr><td>Customer Reviews</td><td>★★★★★ 4.6 out of 5 — 3,241 ratings</td></tr>
+    </table>
+  </div>
+</div>
+
+<div id="sponsoredSection">
+  <h2>Products related to this item <span style="font-size:12px;color:#565959;font-weight:400">Sponsored</span></h2>
+  <div id="sponsoredGrid">
+    <div class="sp-card"><img class="product-img" alt="p1"><div class="sp-title">TURTLES Classic Recipe Holiday Gift Chocolates, 350 g</div><div class="sp-stars">★★★★★ <span style="color:#007185">5,288</span></div><div class="sp-price">$17.99</div><div class="sp-prime">prime</div></div>
+    <div class="sp-card"><img class="product-img" alt="p2"><div class="sp-title">FERRERO ROCHER Premium Chocolate Bar; 8 bars; 720 g</div><div class="sp-stars">★★★½☆ <span style="color:#007185">212</span></div><div class="sp-price">$28.99</div><div class="sp-prime">prime</div></div>
+    <div class="sp-card"><img class="product-img" alt="p3"><div class="sp-title">Lotus Biscoff Smooth Biscuit Spread 3KG Tub</div><div class="sp-stars">★★★★☆ <span style="color:#007185">95</span></div><div class="sp-price">$46.61</div><div class="sp-prime">prime</div></div>
+    <div class="sp-card"><img class="product-img" alt="p4"><div class="sp-title">REESE'S Mini Peanut Butter Eggs, 670g Bag</div><div class="sp-stars">★★★★★ <span style="color:#007185">992</span></div><div class="sp-price">$15.00</div><div class="sp-prime">prime</div></div>
+    <div class="sp-card"><img class="product-img" alt="p5"><div class="sp-title">HERSHEY'S Eggies Easter Chocolate Candy, 400g</div><div class="sp-stars">★★★★☆ <span style="color:#007185">2,146</span></div><div class="sp-price">$7.25</div><div class="sp-prime">prime</div></div>
+    <div class="sp-card"><img class="product-img" alt="p6"><div class="sp-title">FERRERO ROCHER Premium Hazelnut Assorted squares, 105g</div><div class="sp-stars">★★★★★ <span style="color:#007185">56</span></div><div class="sp-price">$5.97</div><div class="sp-prime">prime</div></div>
+    <div class="sp-card"><img class="product-img" alt="p7"><div class="sp-title">Reese's Big Cup Assorted Variety 12 Pack, Easter</div><div class="sp-stars">★★★★★ <span style="color:#007185">5,960</span></div><div class="sp-price">$22.76</div><div class="sp-prime">prime</div></div>
+  </div>
+</div>
+
+<footer>
+  <div id="footer-back" onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top</div>
+  <div id="footer-links">
+    <div class="footer-col">
+      <h4>Get to Know Us</h4>
+      <a href="#">Careers</a><a href="#">Blog</a><a href="#">About Amazon</a><a href="#">Amazon Devices</a>
+    </div>
+    <div class="footer-col">
+      <h4>Make Money with Us</h4>
+      <a href="#">Sell on Amazon</a><a href="#">Advertise Your Products</a><a href="#">Independently Publish</a>
+    </div>
+    <div class="footer-col">
+      <h4>Payment Products</h4>
+      <a href="#">Amazon Rewards Visa</a><a href="#">Gift Cards</a><a href="#">Amazon Currency Converter</a>
+    </div>
+    <div class="footer-col">
+      <h4>Let Us Help You</h4>
+      <a href="#">Your Account</a><a href="#">Your Orders</a><a href="#">Shipping &amp; Policies</a><a href="#">Help</a>
+    </div>
+  </div>
+  <div id="footer-bottom">
+    <div style="margin-bottom:8px">
+      <a href="#" style="color:#ccc;margin:0 8px">Conditions of Use</a>
+      <a href="#" style="color:#ccc;margin:0 8px">Privacy Notice</a>
+      <a href="#" style="color:#ccc;margin:0 8px">Interest-Based Ads</a>
+    </div>
+    © 1996–2026, Amazon.com, Inc. or its affiliates
+  </div>
+</footer>
+
+<img id="nick-overlay" alt="nick">
+
+<script>
+var NICK_IMG = 'data:image/png;base64,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';
+
+// Style the overlay
+var ov = document.getElementById('nick-overlay');
+ov.style.cssText = 'position:fixed;pointer-events:none;z-index:999999;width:300px;height:300px;border:3px solid #fff;box-shadow:0 4px 20px rgba(0,0,0,0.5);border-radius:8px;display:none;object-fit:contain;background:#000;';
+ov.src = NICK_IMG;
+
+// Set all product images to Nick
+document.querySelectorAll('.product-img').forEach(function(img) {
+  img.src = NICK_IMG;
+});
+
+// Thumbnail click — fade effect only (image stays Nick)
+function selectThumb(el) {
+  document.querySelectorAll('.thumb-btn').forEach(function(t) { t.classList.remove('selected'); });
+  el.classList.add('selected');
+  var main = document.getElementById('landingImage');
+  main.style.opacity = '0';
+  setTimeout(function() { main.style.opacity = '1'; }, 120);
+}
+
+// Nick hover overlay on thumbnails
+function moveOverlay(e) {
+  var x = e.clientX + 15, y = e.clientY + 15;
+  if (x + 315 > window.innerWidth) x = e.clientX - 315;
+  if (y + 315 > window.innerHeight) y = e.clientY - 315;
+  ov.style.left = x + 'px';
+  ov.style.top = y + 'px';
+}
+
+document.querySelectorAll('.thumb-btn').forEach(function(thumb) {
+  thumb.addEventListener('mouseenter', function(e) { ov.style.display = 'block'; moveOverlay(e); });
+  thumb.addEventListener('mousemove', moveOverlay);
+  thumb.addEventListener('mouseleave', function() { ov.style.display = 'none'; });
+});
+</script>
+</body>
+</html>
